@@ -10,4 +10,11 @@
       directory="static"
       />
 
+    <browser:page
+        for="imio.dms.mail.dmsmail.IImioDmsIncomingMail"
+        name="IncomingmailWSClient"
+        permission="zope2.Public"
+        class=".views.IncomingMailSoapClientView"
+    />
+
 </configure>
