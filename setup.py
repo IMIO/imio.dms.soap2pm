@@ -44,6 +44,8 @@ setup(
         'five.grok',
         'plone.api',
         'setuptools',
+        'imio.dms.mail',
+        'imio.pm.wsclient',
     ],
     extras_require={
         'test': [
