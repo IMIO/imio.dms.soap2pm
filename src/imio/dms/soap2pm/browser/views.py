@@ -17,3 +17,7 @@ class IncomingMailSoapClientView(BrowserView):
                         'filename': obj.file.filename.encode('utf8'),
                         'file': base64.b64encode(obj.file.data)})
         return res
+
+    def exampleDecision(self):
+        return "<p>Le collège communal autorise la location de la salle par Mr Jean Menfout à la date du"
+        "12/02/2015 de 11h à 18h pour l'organisation d'un anniversaire.</p>"
