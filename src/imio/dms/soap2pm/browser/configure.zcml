@@ -13,8 +13,11 @@
     <browser:page
         for="imio.dms.mail.dmsmail.IImioDmsIncomingMail"
         name="IncomingmailWSClient"
-        permission="zope2.Public"
+        permission="zope2.View"
         class=".views.IncomingMailSoapClientView"
+        allowed_attributes="
+            detailed_description
+        "
     />
 
 </configure>

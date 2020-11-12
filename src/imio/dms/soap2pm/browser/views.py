@@ -27,4 +27,5 @@ class IncomingMailSoapClientView(BrowserView):
         return res
 
     def detailed_description(self):
+        """ Return a link to current object """
         return u"<p>Fiche courrier liée: %s</p>" % object_link(self.context)
