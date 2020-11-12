@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2 (unreleased)
+0.2 (2020-11-12)
 ----------------
 
 - Allowed detailed_description method to be called.
