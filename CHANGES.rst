@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.3 (unreleased)
+0.3 (2021-04-21)
 ----------------
 
 - Added all file types in `get_main_files`.
