@@ -5,8 +5,8 @@ Changelog
 0.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Added all file types in `get_main_files`.
+  [sgeulette]
 
 0.2 (2020-11-12)
 ----------------

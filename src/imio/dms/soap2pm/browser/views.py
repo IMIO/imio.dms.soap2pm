@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import base64
-
-from Products.CMFPlone.utils import safe_unicode
-from Products.Five import BrowserView
+from imio.helpers.xhtml import object_link
 from Products.CMFCore.utils import getToolByName
+from Products.Five import BrowserView
 
-
-def object_link(obj, view='', title=''):
-    href = view and "%s/%s" % (obj.absolute_url(), view) or obj.absolute_url()
-    tit = title and safe_unicode(title) or safe_unicode(obj.Title())
-    return u'<a href="%s">%s</a>' % (href, tit)
+import base64
 
 
 class IncomingMailSoapClientView(BrowserView):
@@ -19,7 +13,8 @@ class IncomingMailSoapClientView(BrowserView):
     def get_main_files(self):
         pc = getToolByName(self.context, 'portal_catalog')
         res = []
-        for brain in pc(portal_type='dmsmainfile', path='/'.join(self.context.getPhysicalPath())):
+        for brain in pc(portal_type=('dmsmainfile', 'dmsommainfile', 'dmsappendixfile'),
+                        path='/'.join(self.context.getPhysicalPath())):
             obj = brain.getObject()
             res.append({'title': obj.title.encode('utf8'),
                         'filename': obj.file.filename.encode('utf8'),
@@ -28,4 +23,4 @@ class IncomingMailSoapClientView(BrowserView):
 
     def detailed_description(self):
         """ Return a link to current object """
-        return u"<p>Fiche courrier liée: %s</p>" % object_link(self.context)
+        return u"<p>Fiche courrier liée: %s</p>" % object_link(self.context, target="_blank")

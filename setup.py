@@ -49,6 +49,7 @@ setup(
         'plone.api',
         'setuptools',
         'imio.dms.mail',
+        'imio.helpers',
         'imio.pm.wsclient',
     ],
     extras_require={
