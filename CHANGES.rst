@@ -5,8 +5,8 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Corrected UnicodeDecodeError
+  [sgeulette]
 
 0.3 (2021-04-21)
 ----------------

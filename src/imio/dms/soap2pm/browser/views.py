@@ -2,6 +2,7 @@
 
 from imio.helpers.xhtml import object_link
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.utils import safe_unicode
 from Products.Five import BrowserView
 
 import base64
@@ -16,8 +17,8 @@ class IncomingMailSoapClientView(BrowserView):
         for brain in pc(portal_type=('dmsmainfile', 'dmsommainfile', 'dmsappendixfile'),
                         path='/'.join(self.context.getPhysicalPath())):
             obj = brain.getObject()
-            res.append({'title': obj.title.encode('utf8'),
-                        'filename': obj.file.filename.encode('utf8'),
+            res.append({'title': safe_unicode(obj.title),
+                        'filename': safe_unicode(obj.file.filename),
                         'file': base64.b64encode(obj.file.data)})
         return res
 
