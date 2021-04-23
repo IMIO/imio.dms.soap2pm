@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.4 (unreleased)
+0.4 (2021-04-23)
 ----------------
 
 - Corrected UnicodeDecodeError
