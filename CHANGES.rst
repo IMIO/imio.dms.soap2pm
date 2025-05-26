@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.5 (unreleased)
+0.5 (2025-05-26)
 ----------------
 
 - Added uninstall profile.
