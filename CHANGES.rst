@@ -5,8 +5,8 @@ Changelog
 0.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Added uninstall profile.
+  [sgeulette]
 
 0.4 (2021-04-23)
 ----------------
