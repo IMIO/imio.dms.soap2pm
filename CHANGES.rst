@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+0.6 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
 0.5 (2025-05-26)
 ----------------
 
